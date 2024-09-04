@@ -1,12 +1,14 @@
 import { DBSQLClient } from '@databricks/sql';
 import  express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 const app = express();
 dotenv.config();
 const port = process.env.PORT || 3010;
 
 app.use(express.json());
+app.use(cors())
 
 const token = "dapie6b8d05bc18929b4e120930c1152ed71-3";
 const server_hostname = "adb-4821506742419671.11.azuredatabricks.net";
