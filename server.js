@@ -8,9 +8,9 @@ const port = process.env.PORT || 3010;
 
 app.use(express.json());
 
-const token = process.env.TOKEN;
-const server_hostname = process.env.SERVER_HOSTNAME;
-const http_path = process.env.HTTP_PATH;
+const token = "dapie6b8d05bc18929b4e120930c1152ed71-3";
+const server_hostname = "adb-4821506742419671.11.azuredatabricks.net";
+const http_path = "/sql/1.0/warehouses/a45ce58754c146b6";
 
 const client = new DBSQLClient();
 
