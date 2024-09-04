@@ -16,6 +16,9 @@ const client = new DBSQLClient();
 
 const connectToDatabricks = async (query) => {
   try {
+    console.log('TOKEN:', token);
+    console.log('SERVER_HOSTNAME:', server_hostname);
+    console.log('HTTP_PATH:', http_path);
     const clientConnection = await client.connect({
       token: token,
       host: server_hostname,
