@@ -17,20 +17,18 @@ const server_hostname = "adb-4821506742419671.11.azuredatabricks.net";
 const http_path = "/sql/1.0/warehouses/a45ce58754c146b6";
 
 const client = new DBSQLClient();
-let clientConnection; 
+//let clientConnection; 
 
 const connectToDatabricks = async (query) => {
   try {
     console.log('TOKEN:', token);
     console.log('SERVER_HOSTNAME:', server_hostname);
     console.log('HTTP_PATH:', http_path);
-    if (!clientConnection) {
-      clientConnection = await client.connect({
+    const clientConnection = await client.connect({
         token: token,
         host: server_hostname,
         path: http_path,
       });
-    }
 
     const session = await clientConnection.openSession();
     const queryOperation = await session.executeStatement(query, {
