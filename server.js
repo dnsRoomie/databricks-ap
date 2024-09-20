@@ -35,7 +35,14 @@ const connectToDatabricks = async (query) => {
       runAsync: true,
     });
 
+    //const queryOperation = await session.executeStatement(query);
+
     const result = await queryOperation.fetchAll();
+    // let result = [];
+    // while (queryOperation.hasMoreRows) {
+    //   const partialResults = await queryOperation.fetchNext(); // Fetch the next set of rows
+    //   result = result.concat(partialResults);
+    // }
     await queryOperation.close();
     await session.close();
     await clientConnection.close();
