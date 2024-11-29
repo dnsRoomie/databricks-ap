@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use(compression());
 
-const token = process.env.DATABRICKS_TOKEN || "dapie6b8d05bc18929b4e120930c1152ed71-3";
+const token = process.env.DATABRICKS_TOKEN || "dapi30b1cba1657639a5ce334e7def0e538c-3";
 const server_hostname = process.env.DATABRICKS_HOST || "adb-4821506742419671.11.azuredatabricks.net";
 const http_path = process.env.DATABRICKS_PATH || "/sql/1.0/warehouses/a45ce58754c146b6";
 
